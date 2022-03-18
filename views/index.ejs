@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="public/css/index.css"/>
+    </head>
+    <body>
+        <%- include("partials/header.ejs"); %>
+        <main>
+            <div class="cover-photo-wrapper">
+                <img class="cover-photo" src="/public/images/mountain.jpg"/>
+                <div class="cover-text-wrapper">
+                    <h1 class="cover-text">Take a relax and see some movies</h1>
+                </div>
+            </div>
+            <div class="home-videos-container">
+                <h2 class="title">Popular videos</h2>
+                <div class="videos-grid">  
+                    <% videos.forEach(video => { %>
+                        <div class="home-video-card">
+                            <img src="<%- video.poster_name%>" class="home-video-card-img"/>
+                            <div class="home-video-card-text-wrapper">
+                                <h4 class="home-video-card-title"><%- video.title %></h4>
+                                <a href="/videos/<%=video['id']%>" class="home-video-card-play-btn click-feedback">
+                                    Play
+                                </a>
+                            </div>
+                        </div>
+                    <% }) %>
+                    <a href="/videos" class="see-more-btn click-feedback">
+                        See all movies >
+                    </a>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

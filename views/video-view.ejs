@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/public/css/index.css"/>
+    </head>
+    <body>
+        <%- include('partials/header.ejs'); %>
+        <div class="video-view-container">
+            <div class="video-view">
+                <video src="/video/<%=video_info['id']%>" 
+                    id="video" 
+                    controls 
+                    alt="No video found"
+                    preload="auto"
+                    playsinline="true"
+                >
+                </video>
+                <div class="video-info">
+                    <h4 class="videos-info-title"><%- video_info.title%></h4>
+                    <p class="videos-info-description"></p>
+                </div>
+            </div>
+            <div class="suggestion-videos">
+                <h3 class="title">Suggestion</h3>
+                <div class="videos-grid">
+                    <% sug_videos.forEach(v => { %>
+                        <a href="/videos/<%=v.id%>" class="videos-card custom-size-card click-feedback">
+                            <div class="videos-card-img-wrapper">
+                                <img src="<%= v.poster_name%>" class="videos-card-img"/>
+                                <p class="run-time"><%=v.run_time%></p>
+                            </div>
+                            <div class="videos-info">
+                                <h4 class="videos-info-title"><%=v.title%></h4>
+                                <p class="videos-info-description"></p>
+                            </div>
+                        </a>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/public/scripts/videos.js"></script>
+    </body>
+</html>

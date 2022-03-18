@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/public/css/index.css"/>
+    </head>
+    <body>
+        <%- include("partials/header.ejs"); %>
+        <div class="videos-container">
+            <h2 class="title">Movies</h2>
+            <div class="videos-grid">
+                <% videos.forEach(video => { %>
+                    <a href="/videos/<%=video['id']%>" class="videos-card click-feedback">
+                        <div class="videos-card-img-wrapper">
+                            <img src="<%-video.poster_name%>" class="videos-card-img"/>
+                            <p class="run-time"><%- video.run_time%></p>
+                        </div>
+                        <div class="videos-info">
+                            <h4 class="videos-info-title"><%- video.title%></h4>
+                            <p class="videos-info-description"></p>
+                        </div>
+                    </a>
+                <% }) %>
+            </div>
+        </div>
+    </body>
+</html>
