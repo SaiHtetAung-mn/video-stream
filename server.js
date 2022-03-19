@@ -12,8 +12,7 @@ class Server {
     io;
     activeSockets = [];
 
-    PORT = 3000;
-    HOST = 'localhost';
+    PORT = process.env.PORT||3000;
 
     constructor() {
         if(Server.instance == null) {
@@ -129,7 +128,7 @@ class Server {
 
     listen() {
         this.server.listen(this.PORT, () => {
-            console.log(`Server running on ${this.HOST}:${this.PORT}`);
+            console.log(`Server running on ${this.PORT}`);
         })
     }
 }
