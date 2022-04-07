@@ -1,23 +1,16 @@
 [
     {
         "id": "1",
-        "title": "A chit a yu khan",
-        "file_name": "/public/videos/song.3gp",
-        "poster_name": "/public/images/posters/dear_comrade.jpg",
+        "title": "Mercy",
+        "file_name": "/public/videos/mercy.mp4",
+        "poster_name": "/public/images/posters/mercy.jpg",
         "run_time": "00:02:43"
     },
     {
         "id": "2",
-        "title": "Guided meditation for beginers",
-        "file_name": "/public/videos/meditation.3gp",
-        "poster_name": "/public/images/posters/geetha_govindam.jpg",
+        "title": "Hard days",
+        "file_name": "/public/videos/hard_days.mp4",
+        "poster_name": "/public/images/posters/hard_days.jpg",
         "run_time": "00:03:00"
-    },
-    {
-        "id": "3",
-        "title": "Closer - Joshua Radin",
-        "file_name": "/public/videos/JoshuaRadin.3gp",
-        "poster_name": "/public/images/posters/jabtakhaijaan.jpg",
-        "run_time": "2:30:33"
     }
 ]
